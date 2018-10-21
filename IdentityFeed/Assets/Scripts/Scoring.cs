@@ -28,31 +28,37 @@ public class Scoring : MonoBehaviour {
 
     private void addFollowers(){
         Debug.Log(multiplier);
+        // Edits the follower count based on percent
         if (multiplier > 0 && multiplier < .33)
         {
+            // Will set a follower count between -5 and 0
             multiplier *= 15;
             multiplier -= 5;
         }else if(multiplier >= .33 && multiplier<.5){
+            // Will set a follower counnt between 0 and 1
             multiplier *= 6;
             multiplier -= 2;
         }else if(multiplier >= .5 && multiplier<=1){
+            // Will set a follower counnt between 1 and 5
             multiplier *= 8;
             multiplier -= 3;
         }else{
+            //If topic is not in list it will default to 1
             multiplier = 1;
         }
-        multiplier *= 100;
+        multiplier *= 100; // This is a stand in for the time multiplier, that's an easy thing to add when ready
         multiplier = Mathf.Ceil(multiplier);
-        contentArea.text += multiplier;
+        contentArea.text += multiplier; //Put the final follower count onto the scene
     }
 
     private void readData(){
+        //Parses topics.csv to get a percent
         string[] records = topics.text.Split(lineSep);
         foreach (string record in records) {
             string[] fields = record.Split(rowSep);
             foreach (string field in fields) {
-                if (topicSeen)
-                {
+                // When it finds the word, it will get the next element
+                if (topicSeen) {
                     percent = float.Parse(field);
                 }
                 if(field == topic){
