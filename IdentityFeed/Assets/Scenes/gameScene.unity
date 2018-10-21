@@ -77,15 +77,18 @@ LightmapSettings:
     m_PVRDirectSampleCount: 32
     m_PVRSampleCount: 500
     m_PVRBounces: 2
-    m_PVRFiltering: 0
+    m_PVRFilterTypeDirect: 0
+    m_PVRFilterTypeIndirect: 0
+    m_PVRFilterTypeAO: 0
     m_PVRFilteringMode: 1
     m_PVRCulling: 1
     m_PVRFilteringGaussRadiusDirect: 1
     m_PVRFilteringGaussRadiusIndirect: 5
     m_PVRFilteringGaussRadiusAO: 2
-    m_PVRFilteringAtrousColorSigma: 1
-    m_PVRFilteringAtrousNormalSigma: 1
-    m_PVRFilteringAtrousPositionSigma: 1
+    m_PVRFilteringAtrousPositionSigmaDirect: 0.5
+    m_PVRFilteringAtrousPositionSigmaIndirect: 2
+    m_PVRFilteringAtrousPositionSigmaAO: 1
+    m_ShowResolutionOverlay: 1
   m_LightingDataAsset: {fileID: 0}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -107,6 +110,8 @@ NavMeshSettings:
     manualTileSize: 0
     tileSize: 256
     accuratePlacement: 0
+    debug:
+      m_Flags: 0
   m_NavMeshData: {fileID: 0}
 --- !u!1 &448119301
 GameObject:
@@ -179,11 +184,11 @@ Camera:
   m_TargetEye: 3
   m_HDR: 1
   m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
-  m_StereoMirrorMode: 0
 --- !u!4 &448119306
 Transform:
   m_ObjectHideFlags: 0
@@ -228,9 +233,9 @@ MonoBehaviour:
   trivialMadlibs: {fileID: 4900000, guid: af79ea0518fd74ee89f1d875f0ce2981, type: 3}
   sportsMadlibs: {fileID: 4900000, guid: 8664f45446bf044e29dd229a956de420, type: 3}
   nationMadlibs: {fileID: 4900000, guid: efd23b59f78a861488595114c50e1780, type: 3}
-  trivialTopics: {fileID: 4900000, guid: ef3932005802848faaafdbe53b7de6b5, type: 3}
-  sportTopics: {fileID: 4900000, guid: f464ccacd83724c14bc2e8af358a64c8, type: 3}
-  nationTopics: {fileID: 4900000, guid: fc635a8c333ed4fb7a07c8ee3f0e5a88, type: 3}
+  trivialTopics: {fileID: 4900000, guid: 3c9233c4f52a84eb3bf3563f3b51135b, type: 3}
+  sportTopics: {fileID: 4900000, guid: 3a3afa238f96143debf38ea78f3e6587, type: 3}
+  nationTopics: {fileID: 4900000, guid: c99719a29944f417f8b2b8a78c8565e6, type: 3}
   randNames: {fileID: 4900000, guid: f26aa56c076f7467281185b0f607428b, type: 3}
   tweetPrefab: {fileID: 1582411838721538, guid: a3139136adb873844b5215887b3cac08,
     type: 2}
@@ -258,8 +263,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 345372eb3dbb645c18773c35646f7a78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  goodAdj: {fileID: 4900000, guid: 9fca2ec08ebe049c9b3caeb9cecec96e, type: 3}
-  badAdj: {fileID: 4900000, guid: a0b29ef8663954ceda1aa3cbe8923c0d, type: 3}
+  goodAdj: {fileID: 4900000, guid: e48ceba0e87174d728d9241207bd1086, type: 3}
+  badAdj: {fileID: 4900000, guid: c310138f069c848a682ee60b7ea55662, type: 3}
 --- !u!1001 &1019031236
 Prefab:
   m_ObjectHideFlags: 0
