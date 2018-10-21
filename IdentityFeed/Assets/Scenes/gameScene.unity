@@ -231,6 +231,7 @@ MonoBehaviour:
   trivialTopics: {fileID: 4900000, guid: ef3932005802848faaafdbe53b7de6b5, type: 3}
   sportTopics: {fileID: 4900000, guid: f464ccacd83724c14bc2e8af358a64c8, type: 3}
   nationTopics: {fileID: 4900000, guid: fc635a8c333ed4fb7a07c8ee3f0e5a88, type: 3}
+  randNames: {fileID: 4900000, guid: f26aa56c076f7467281185b0f607428b, type: 3}
   tweetPrefab: {fileID: 1582411838721538, guid: a3139136adb873844b5215887b3cac08,
     type: 2}
 --- !u!4 &754030820

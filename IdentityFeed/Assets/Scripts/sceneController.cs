@@ -12,6 +12,7 @@ public class sceneController : MonoBehaviour {
     public TextAsset trivialTopics;
     public TextAsset sportTopics;
     public TextAsset nationTopics;
+    public TextAsset randNames;
 
 
     public GameObject tweetPrefab;
@@ -86,7 +87,10 @@ public class sceneController : MonoBehaviour {
 
     private string madeUpName()
     {
-        return "Bob";  
+        string text = randNames.text;
+        var splitText = text.Split('\n');
+        var randomIndex = UnityEngine.Random.Range(0, splitText.Length);
+        return splitText[randomIndex];
     }
 
     private string topicGen(int level)
