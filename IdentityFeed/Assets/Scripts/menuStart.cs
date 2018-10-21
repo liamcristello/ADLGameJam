@@ -7,6 +7,6 @@ public class menuStart : MonoBehaviour {
 
     public void NextScene()
     {
-        SceneManager.LoadScene("gameScene");
+        SceneManager.LoadScene("hotfixScene");
     }
 }
