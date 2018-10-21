@@ -1029,6 +1029,8 @@ MonoBehaviour:
   good: {fileID: 4900000, guid: 9fca2ec08ebe049c9b3caeb9cecec96e, type: 3}
   contentArea: {fileID: 1948929331}
   inputer: {fileID: 106212837}
+  followers: 0
+  scoreTime: 10
 --- !u!114 &1948929331
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1061,7 +1063,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: 0
 --- !u!222 &1948929332
 CanvasRenderer:
   m_ObjectHideFlags: 0

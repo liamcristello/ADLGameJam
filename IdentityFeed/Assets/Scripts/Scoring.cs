@@ -12,7 +12,8 @@ public class Scoring : MonoBehaviour
     public TextAsset good;
     public Text contentArea;
     public InputField inputer;
-    private float followers;
+    public float followers;
+    public int scoreTime;
     //private float multiplier;
     //private float percent;
     //public string topic;
@@ -33,6 +34,9 @@ public class Scoring : MonoBehaviour
     public void getTextin()
     {
         var tweet = inputer.text;
+        if (inputer.text == ""){
+            return;
+        }
         string topic = newReadTweet(tweet);
         int isPos = posOrNeg(tweet);
         float multiplier;
@@ -73,9 +77,12 @@ public class Scoring : MonoBehaviour
             //If topic is not in list it will default to 1
             multiplier = 1;
         }
-        multiplier *= 100; // This is a stand in for the time multiplier, that's an easy thing to add when ready
+        multiplier *= scoreTime; // This is a stand in for the time multiplier, that's an easy thing to add when ready
         multiplier = Mathf.Ceil(multiplier);
         followers += multiplier;
+        if(followers<0){
+            followers = 0;
+        }
         contentArea.text = "";
         contentArea.text += followers; //Put the final follower count onto the scene
     }
