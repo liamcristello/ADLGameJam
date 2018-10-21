@@ -4,18 +4,22 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class tweetGenerator : MonoBehaviour {
-
-	// Use this for initialization
-	void Start () {
+    public Toggle upvoteToggle;
+    public Toggle downvoteToggle;
+    // Use this for initialization
+    void Start()
+    {
         generateTweet("Anthony", "It really do be like that", 35, 200);
-	}
-	
-	// Update is called once per frame
-	void Update () {
+        upvoteToggle.onValueChanged.AddListener(delegate { valueChanged(upvoteToggle.isOn, upvoteToggle); });
+        downvoteToggle.onValueChanged.AddListener(delegate { valueChanged(downvoteToggle.isOn, downvoteToggle); });
+
+    }
+    // Update is called once per frame
+    void Update () {
 		
 	}
 
-    void generateTweet(string name, string content, int upvotes, int downvotes)
+    public void generateTweet(string name, string content, int upvotes, int downvotes)
     {
         foreach(Transform child in this.transform)
         {
@@ -29,7 +33,6 @@ public class tweetGenerator : MonoBehaviour {
             }
             else if(child.name == "Upvotes")
             {
-                Debug.Log(child.GetChild(0).GetComponent<Text>().text);
                 child.GetChild(0).GetComponent<Text>().text = upvotes.ToString();
             }
             else if (child.name == "Downvotes")
@@ -43,4 +46,18 @@ public class tweetGenerator : MonoBehaviour {
         }
         
     }
+
+    void valueChanged(bool isOn, Toggle currTog){
+      
+            string currText = currTog.transform.Find("Text").GetComponent<Text>().text;
+            if (isOn)
+            {
+                currTog.transform.Find("Text").GetComponent<Text>().text = (int.Parse(currText) + 1).ToString();
+            }
+            else if(!isOn)
+            {
+                currTog.transform.Find("Text").GetComponent<Text>().text = (int.Parse(currText) -1).ToString();
+
+            }
+        }
 }
