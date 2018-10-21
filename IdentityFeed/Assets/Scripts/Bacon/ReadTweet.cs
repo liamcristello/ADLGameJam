@@ -39,15 +39,5 @@ public class ReadTweet : MonoBehaviour {
 		return goodWords.Contains(word);
 	}
 
-	void readTweet(string userTweet) {
-		val splitTweets = userTweet.Split(" ");
-		foreach (string word in splitTweets) {
-			if (isBadword(word))  { /*  */ }
-			if (isGoodword(word)) { /*  */}
-			// Else ignore the word
-		}
-
-	}
-
 
 }
