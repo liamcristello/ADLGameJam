@@ -6,9 +6,39 @@ using UnityEngine.UI;
 public class tweetGenerator : MonoBehaviour {
     public Toggle upvoteToggle;
     public Toggle downvoteToggle;
+    public Sprite prof1;
+    public Sprite prof2;
+    public Sprite prof3;
+    public Sprite prof4;
+    public Sprite prof5;
+    public Sprite prof6;
+    public Sprite prof7;
+    public Sprite prof8;
+    public Sprite prof9;
+    public Sprite prof10;
+    public Sprite prof11;
+    public Sprite prof12;
+    public Sprite prof13;
+    public Sprite prof14;
+    Sprite[] sprites;
     // Use this for initialization
     void Start()
     {
+        sprites = new Sprite[14];
+        sprites[0] = prof1;
+        sprites[1] = prof2;
+        sprites[2] = prof3;
+        sprites[3] = prof4;
+        sprites[4] = prof5;
+        sprites[5] = prof6;
+        sprites[6] = prof7;
+        sprites[7] = prof8;
+        sprites[8] = prof9;
+        sprites[9] = prof10;
+        sprites[10] = prof11;
+        sprites[11] = prof12;
+        sprites[12] = prof13;
+        sprites[13] = prof14;
         upvoteToggle.onValueChanged.AddListener(delegate { valueChanged(upvoteToggle.isOn, upvoteToggle); });
         downvoteToggle.onValueChanged.AddListener(delegate { valueChanged(downvoteToggle.isOn, downvoteToggle); });
 
@@ -40,7 +70,7 @@ public class tweetGenerator : MonoBehaviour {
             }
             else if(child.name == "Image")
             {
-                child.GetComponent<Image>().color = Random.ColorHSV(0, 1, 0f, 1, .5f, 1);
+                child.GetComponent<Image>().sprite = sprites[Random.Range(0, 14)];
             }
         }
         
