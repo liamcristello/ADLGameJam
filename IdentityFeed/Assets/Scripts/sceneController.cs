@@ -9,10 +9,14 @@ public class sceneController : MonoBehaviour {
     public TextAsset trivialMadlibs;
     public TextAsset sportsMadlibs;
     public TextAsset nationMadlibs;
+
     public TextAsset trivialTopics;
     public TextAsset sportTopics;
     public TextAsset nationTopics;
+
     public TextAsset randNames;
+
+    public Scoring scoring;
 
 
     public GameObject tweetPrefab;
@@ -39,6 +43,11 @@ public class sceneController : MonoBehaviour {
         {
             timeInCurrentLevel = 0;
             this.level++;
+            if (this.level == 1) {
+                scoring.updateTopics(sportTopics);
+            } else if (this.level == 2) {
+                scoring.updateTopics(nationTopics);
+            }
         }
 
         if(lastTweetTime > 5)

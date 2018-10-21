@@ -130,7 +130,7 @@ public class Scoring : MonoBehaviour
             string[] fields = record.Split(rowSep);
             foreach (string field in fields)
             {
-                if (word == field)
+                if (word == field.ToLower())
                 {
                     return true;
                 }
@@ -197,6 +197,7 @@ public class Scoring : MonoBehaviour
 
     public void updateTopics(TextAsset newTopics){
         this.topics = newTopics;
+        print("updating!!!");
     }
 }
 
