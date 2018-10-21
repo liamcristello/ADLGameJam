@@ -201,6 +201,10 @@ public class Scoring : MonoBehaviour
         }
         return false;
     }
+
+    public void updateTopics(TextAsset newTopics){
+        this.topics = newTopics;
+    }
 }
 
 
