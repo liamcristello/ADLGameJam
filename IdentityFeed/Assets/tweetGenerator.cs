@@ -7,7 +7,7 @@ public class tweetGenerator : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        generateTweet("Xx_bonyBoy_xX", "How tf the moon even exist", 999, 2);
+        generateTweet("Anthony", "It really do be like that", 35, 200);
 	}
 	
 	// Update is called once per frame
