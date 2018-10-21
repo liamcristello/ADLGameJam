@@ -20,7 +20,7 @@ public class BuildTweet : MonoBehaviour {
 
 
 
-	string buildTweet(string topic, int isPos, string madLib) {
+	public string buildTweet(string topic, int isPos, string madLib) {
 		
 		// Replace all '@' chars with adj
 		// Replace all '$' with topic

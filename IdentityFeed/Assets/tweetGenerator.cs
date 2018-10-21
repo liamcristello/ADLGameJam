@@ -9,7 +9,6 @@ public class tweetGenerator : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
-        generateTweet("Anthony", "It really do be like that", 35, 200);
         upvoteToggle.onValueChanged.AddListener(delegate { valueChanged(upvoteToggle.isOn, upvoteToggle); });
         downvoteToggle.onValueChanged.AddListener(delegate { valueChanged(downvoteToggle.isOn, downvoteToggle); });
 
