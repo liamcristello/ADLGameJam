@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class sceneController : MonoBehaviour {
     public GameObject tweetPrefab;
@@ -17,15 +18,16 @@ public class sceneController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
 	}
 
     void createNewTweet()
     {
         GameObject newTweet = Object.Instantiate(tweetPrefab);
         newTweet.transform.parent = GameObject.Find("TweetScroler").transform;
-        newTweet.GetComponent<RectTransform>().localScale = new Vector3(1, 1, 1);
+            newTweet.GetComponent<RectTransform>().localScale = new Vector3(1, 1, 1);
         allTweets.Add(newTweet);
         GameObject.Find("TweetScroler").GetComponent<RectTransform>().sizeDelta = new Vector2(500, 100 * allTweets.Count);
+        GameObject.Find("TweetScroler").GetComponent<RectTransform>().localPosition = new Vector3(0, -(100 * allTweets.Count) / 4, 0);
+
     }
 }
