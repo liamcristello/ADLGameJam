@@ -278,6 +278,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d844e6fe9bb720a4485048e2b69c4afd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  upvoteToggle: {fileID: 114036348873859632}
+  downvoteToggle: {fileID: 114469257678900744}
 --- !u!114 &114469257678900744
 MonoBehaviour:
   m_ObjectHideFlags: 1
