@@ -39,7 +39,7 @@ public class sceneController : MonoBehaviour {
 	void Update () {
         timeInCurrentLevel += Time.deltaTime;
         lastTweetTime += Time.deltaTime;
-        if(timeInCurrentLevel > 20)
+        if(timeInCurrentLevel > 100)
         {
             timeInCurrentLevel = 0;
             this.level++;
@@ -49,6 +49,11 @@ public class sceneController : MonoBehaviour {
                 scoring.updateTopics(nationTopics);
             }
         }
+        if (Input.GetKey(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
+
 
         if(lastTweetTime > 5)
         {

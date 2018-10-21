@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class tweetGenerator : MonoBehaviour {
     public Toggle upvoteToggle;
     public Toggle downvoteToggle;
+
     // Use this for initialization
     void Start()
     {
@@ -15,8 +16,8 @@ public class tweetGenerator : MonoBehaviour {
     }
     // Update is called once per frame
     void Update () {
-		
-	}
+        
+    }
 
     public void generateTweet(string name, string content, int upvotes, int downvotes)
     {
