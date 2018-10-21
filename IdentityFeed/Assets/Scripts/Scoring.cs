@@ -21,15 +21,8 @@ public class Scoring : MonoBehaviour
     private char rowSep = ',';
 
 
-    private HashSet<string> goodWords;
-    private HashSet<string> badWords;
-
-
-    // Use this for initialization
-    void Start()
-    {
-
-    }
+    //private HashSet<string> goodWords;
+    //private HashSet<string> badWords;
 
     public void getTextin()
     {
@@ -130,13 +123,13 @@ public class Scoring : MonoBehaviour
 
     private bool isTopic(string word)
     {
+        word = word.ToLower();
         string[] records = topics.text.Split(lineSep);
         foreach (string record in records)
         {
             string[] fields = record.Split(rowSep);
             foreach (string field in fields)
             {
-
                 if (word == field)
                 {
                     return true;
@@ -150,7 +143,7 @@ public class Scoring : MonoBehaviour
     private string newReadTweet(string userTweet)
     {
         // return the topic we foudn
-
+        userTweet = userTweet.ToLower();
         var words = userTweet.Split(' ');
         foreach (string word in words)
         {
