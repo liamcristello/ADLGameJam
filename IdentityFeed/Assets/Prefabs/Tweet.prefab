@@ -109,6 +109,7 @@ GameObject:
   - component: {fileID: 222168009901812234}
   - component: {fileID: 114529453109826610}
   - component: {fileID: 225430107552540280}
+  - component: {fileID: 114370895323626404}
   m_Layer: 5
   m_Name: Tweet
   m_TagString: Untagged
@@ -303,6 +304,17 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &114370895323626404
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1582411838721538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d844e6fe9bb720a4485048e2b69c4afd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114486159711962324
 MonoBehaviour:
   m_ObjectHideFlags: 1
