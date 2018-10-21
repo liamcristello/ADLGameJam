@@ -52,7 +52,6 @@ public class Scoring : MonoBehaviour
 
     private void addFollowers(float multiplier)
     {
-        Debug.Log(multiplier);
         // Edits the follower count based on percent
         if (multiplier > 0 && multiplier < .33)
         {
